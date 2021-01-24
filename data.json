@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "name": "rafael m",
+      "avatar_url": "http:// google",
+      "birth": 831859200000,
+      "gender": "M",
+      "services": "fada",
+      "created_at": 1611509851303
+    }
+  ]
+}
