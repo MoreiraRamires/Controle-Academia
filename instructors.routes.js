@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
-const {age} = require("./uteis")
+const {age, date} = require("./uteis")
 
 // ===*Show*=== 
 
@@ -76,9 +76,13 @@ exports.edit = function(req,res){
   })
   if( !foundInstructor) return res.send("Instructor not found")
  
-  
+    const instructor ={
+      ...foundInstructor,
+      birth: date(foundInstructor.birth)
+    }
 
-  return res.render('instructors/edit', {instructor:foundInstructor})
+
+  return res.render('instructors/edit', {instructor})
 }
 // ===*Delete*===
 
