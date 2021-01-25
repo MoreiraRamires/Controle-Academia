@@ -1,0 +1,14 @@
+Uma solução de apenas uma linha, calculando a partir da quantidade de dias:
+
+// calcula a idade considerando os parâmetros 
+// 'nascimento' e 'hoje' como objetos Date
+function calculaIdade(nascimento, hoje){
+    return Math.floor(Math.ceil(Math.abs(nascimento.getTime() - hoje.getTime()) / (1000 * 3600 * 24)) / 365.25);
+}
+A lógica utilizada é a seguinte:
+
+Math.abs(nascimento.getTime() - hoje.getTime()) - retorna a quantidade de milissegundos passados desde nascimento até hoje. A função Math.abs retorna o módulo da subtração, ou seja, transforma um número negativo em positivo e mantém o sinal de um positivo.
+/ (1000 * 3600 * 24) - calcula a quantidade de dias a partir da quantidade de milissegundos retornada na expressão anterior. Dividindo por 1000, temos a quantidade de segundos; a quantidade de segundos dividindo por 3600 temos a quantidade de horas (pois em 1 hora cabem 3600 segundos); e finalmente divide-se a quantidade de horas por 24, que teremos a quantidade de dias correspondente.
+Math.ceil - arredonda para cima o valor decimal da operação anterior, pois é considerado que se passou um dia mesmo que a quantidade de horas não dê 24 horas. Como por exemplo um bebê que nasceu ontem a noite, consideramos que na manhã de hoje já tenha 1 dia de vida.
+/ 365.25 - finalmente, calculamos o ano dividindo o total de dias pelo total de dias que cabem em um ano. O número 365.25 é porque um ano possui aproximadamente 365 dias e 6 horas, que é igual a 365.25 dias. O ano bixesto vem desta diferença, pois a cada 4 anos, as 6 horas desconsideradas no calendário tornam-se 24 horas, ou seja mais um dia.
+Math.floor - arredonda para baixo a quantidade de anos. Pois, não importa se a pessoa faz aniversário amanhã e tem 25.999 anos, ela tem 25 anos.
