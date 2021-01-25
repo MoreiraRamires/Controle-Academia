@@ -67,10 +67,6 @@ body .card {
   box-shadow: 5px 5px 15px 7px rgba(0, 0, 0, 0.52);
 }
 
-body .card .avatar {
-  background: url(https://source.unsplash.com/collection/9647150) no-repeat center center/cover;
-}
-
 body .card .details {
   padding: 0.4vw;
 }
@@ -123,7 +119,22 @@ body .card .details .item span input {
           align-items: center;
 }
 
-body form input {
+body a.button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 0.8vw 3.2vw;
+  background-color: #8174ad;
+  color: #fff;
+  border-radius: 0.4vw;
+  margin-top: 3.2vw;
+  width: 100%;
+  font-size: 1.6vw;
+}
+
+form input {
   width: 100%;
   outline: none;
   border: none;
@@ -132,28 +143,28 @@ body form input {
   color: black;
 }
 
-body form input ::-webkit-input-placeholder {
+form input ::-webkit-input-placeholder {
   font-size: 1.6vw;
 }
 
-body form input :-ms-input-placeholder {
+form input :-ms-input-placeholder {
   font-size: 1.6vw;
 }
 
-body form input ::-ms-input-placeholder {
+form input ::-ms-input-placeholder {
   font-size: 1.6vw;
 }
 
-body form input ::placeholder {
+form input ::placeholder {
   font-size: 1.6vw;
 }
 
-body form input[type="radio"] {
+form input[type="radio"] {
   width: initial;
   margin-right: 0.4vw;
 }
 
-body form button[type="submit"] {
+form button[type="submit"] {
   padding: 0.8vw 3.2vw;
   background-color: #8174ad;
   color: #fff;

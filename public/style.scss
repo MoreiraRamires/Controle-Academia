@@ -65,13 +65,9 @@ body {
     -webkit-box-shadow: 5px 5px 15px 7px rgba(0, 0, 0, 0.52);
     box-shadow: 5px 5px 15px 7px rgba(0, 0, 0, 0.52);
     .avatar {
-      background: url(https://source.unsplash.com/collection/9647150) no-repeat
-        center center / cover;
-
-      &.show--page {
-        background: url({{instructor.avatar_url}}) no-repeat center center /
-          cover;
-      }
+      // background: url(https://source.unsplash.com/collection/9647150) no-repeat
+      //   center center / cover;
+      // object-fit: cover;
     }
 
     .details {
@@ -122,33 +118,45 @@ body {
   }
 
   /*===Cadastro de Instrutores===*/
-
-  form {
-    input {
-      width: 100%;
-      outline: none;
-      border: none;
-      font-weight: bold;
-      font-size: 1.6vw;
-      color: black;
-      ::placeholder {
-        font-size: 1.6vw;
-      }
-    }
-
-    input[type="radio"] {
-      width: initial;
-      margin-right: 0.4vw;
-    }
-
-    button[type="submit"] {
-      padding: 0.8vw 3.2vw;
-      background-color: $color-primary;
-      color: $color-letter-primary;
-      border-radius: 0.4vw;
-      margin-top: 3.2vw;
-      width: 100%;
+  a.button {
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 0.8vw 3.2vw;
+    background-color: $color-primary;
+    color: $color-letter-primary;
+    border-radius: 0.4vw;
+    margin-top: 3.2vw;
+    width: 100%;
+    font-size: 1.6vw;
+  }
+}
+form {
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6vw;
+    color: black;
+    ::placeholder {
       font-size: 1.6vw;
     }
+  }
+
+  input[type="radio"] {
+    width: initial;
+    margin-right: 0.4vw;
+  }
+
+  button[type="submit"] {
+    padding: 0.8vw 3.2vw;
+    background-color: $color-primary;
+    color: $color-letter-primary;
+    border-radius: 0.4vw;
+    margin-top: 3.2vw;
+    width: 100%;
+    font-size: 1.6vw;
   }
 }
