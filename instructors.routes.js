@@ -14,7 +14,15 @@ exports.show = function(req,res){
   })
   if( !foundInstructor) return res.send("Instructor not found")
  
-  return res.render("./instructors/show", {instructor:foundInstructor})
+  const instructor = {
+    ...foundInstructor,
+    age : "",
+    gender: "",
+    services:'',
+    created_at: ''
+  }
+
+  return res.render("./instructors/show", {instructor})
 }
 
 // ===*Create*===
