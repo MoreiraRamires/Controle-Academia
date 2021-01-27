@@ -1,9 +1,10 @@
 const fs = require('fs')
 const data = require('./data.json')
 const {age, date} = require("./uteis")
+const Intl = require('intl')
 
 // ===*Show*=== 
-
+ 
 exports.show = function(req,res){
   //req.params
 
@@ -21,7 +22,9 @@ exports.show = function(req,res){
     ...foundInstructor,
     age : age(foundInstructor.birth),
     services: foundInstructor.services.split(','),
-    created_at: Intl.DateTimeFormat("pt-Br").format(foundInstructor.created_at)
+   
+    // created_at: Intl.DateTimeFormat("pt-Br").format(foundInstructor.created_at)
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
   }
 
   return res.render("./instructors/show", {instructor})
@@ -69,6 +72,7 @@ exports.edit = function(req,res){
   //req.params
 
   const{id} = req.params
+ 
 
   const foundInstructor = data.instructors.find(function(instructor){
 
@@ -76,13 +80,48 @@ exports.edit = function(req,res){
   })
   if( !foundInstructor) return res.send("Instructor not found")
  
-    const instructor ={
-      ...foundInstructor,
-      birth: date(foundInstructor.birth)
-    }
-
+  const instructor ={
+    ...foundInstructor,
+     birth: date(foundInstructor.birth)
+    // birth: "200-02-01"
+  }
 
   return res.render('instructors/edit', {instructor})
 }
-// ===*Delete*===
 
+
+// ===*Atualizar*===
+exports.put = function(req,res){
+
+  const{id} = req.body
+ 
+
+  const foundInstructor = data.instructors.find(function(instructor,foundIndex){
+
+    if(id == instructor.id){
+      index= foundIndex
+    }
+    return true
+  })
+
+  if( !foundInstructor) return res.send("Instructor not found")
+ 
+  const instructor ={
+    ...foundInstructor,
+    ...req.body,
+     birth: Date.parse(req.body.birth) 
+  }
+
+  data.instructors[index] = instructor;
+
+  fs.writeFile('data.json', JSON.stringify( data,null, 2), function(err){
+    if ( err) return res.send( 'Write error!')
+
+    return res.redirect( `/instructors/${id}`)
+
+  })
+
+}
+
+
+// ===*Delete*===
