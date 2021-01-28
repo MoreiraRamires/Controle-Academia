@@ -7,9 +7,7 @@ routes.get('/',function(req,res){
   
 })
 
-routes.get('/instructors',function(req,res){
-  return res.render('instructors/index')
-})
+routes.get('/instructors',instructors.index)
 routes.put('/instructors/', instructors.put)
 routes.post('/instructors',instructors.post)
 routes.delete('/instructors',instructors.delete)

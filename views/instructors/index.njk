@@ -3,39 +3,24 @@
 {% block content %}
 
   <div class="card">
-    <section class="avatar" style=' background: url(https://source.unsplash.com/collection/9647150) no-repeat
-        center center / cover;'></section>
-    <section class="details">
+    <table>
+      <thead>
+        <tr>
+          <th>Instructor</th>
+          <th>Atendimento</th>
+        </tr>
+      </thead>
 
-      <h3>
-        Detalhes
-      </h3>
+      <tbody>
 
-      <div class="item">
-        <div>Instrutor</div>
-        <div>Ronaldo Saraiva</div>
-      </div>
-      <div class="item">
-        <div>Idade</div>
-        <div>29</div>
-      </div>
-      <div class="item">
-        <div>Sexo</div>
-        <div>Masculino</div>
-      </div>
-      <div class="item">
-        <div>Acompanhamento</div>
-        <div>
-          <span>Musculação</span>
-          <span>Crossfit</span>
-        </div>
-      </div>
-      <div class="item">
-        <div>Desde</div>
-        <div>01/01/2019</div>
-      </div>
+        {% for instructor in instructors %}
+          <tr>
+            <td>{{instructor.name}}</td>
+            <td>{{instructor.services}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
 
-    </section>
-  </div>
-
-{% endblock content %}
+  {% endblock content %}
