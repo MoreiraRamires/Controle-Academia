@@ -2,17 +2,27 @@
 
 {% block content %}
 
-  <form class="card" method="post" action="/instructors">
+  <form class="card" method="POST" action="/instructors?_method=PUT">
     <section class="avatar" style=' background: url(https://source.unsplash.com/collection/9647150) no-repeat
-        center center / cover;'></section>
+      center center / cover;'></section>
     <section class="details">
 
       <h3>
         Editar Instrutor
       </h3>
+
       {% include "instructors/field.njk" %}
 
     </section>
   </form>
 
-{% endblock content %}
+  <form class="card__delete" method="POST" action="/instructors?_method=DELETE">
+    <input type="hidden" name="id" value="{{instructor.id}}">
+    <button type="submit" id="delete_button">
+      <span>
+        <img src="https://www.flaticon.com/svg/vstatic/svg/126/126468.svg?token=exp=1611860317~hmac=3ee23d1d25eec94cfa5376f665a4eebe" style="width:1.5vw;" alt="" srcset="">
+        <span/>
+        Deletar Instrutor</button>
+    </form>
+
+  {% endblock content %}

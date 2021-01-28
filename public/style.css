@@ -54,8 +54,58 @@ body .links a.active {
   font-weight: 700;
 }
 
+body form.card input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.6vw;
+  color: black;
+}
+
+body form.card input ::-webkit-input-placeholder {
+  font-size: 1.6vw;
+}
+
+body form.card input :-ms-input-placeholder {
+  font-size: 1.6vw;
+}
+
+body form.card input ::-ms-input-placeholder {
+  font-size: 1.6vw;
+}
+
+body form.card input ::placeholder {
+  font-size: 1.6vw;
+}
+
+body form.card input[type="radio"] {
+  width: initial;
+  margin-right: 0.4vw;
+}
+
+body form.card button[type="submit"], body form.card #delete_button {
+  padding: 0.8vw 3.2vw;
+  background-color: #8174ad;
+  color: #fff;
+  border-radius: 0.4vw;
+  margin-top: 3.2vw;
+  width: 100%;
+  font-size: 1.6vw;
+  cursor: pointer;
+}
+
+body form.card button[type="submit"]:hover, body form.card #delete_button:hover {
+  background-color: #50fa7b;
+}
+
+body form.card #delete_button:hover {
+  background-color: red;
+}
+
 body .card {
   margin: 3.2vw auto;
+  margin-bottom: 0;
   background-color: white;
   width: 80vw;
   height: auto;
@@ -119,52 +169,38 @@ body .card .details .item span input {
           align-items: center;
 }
 
+body form.card__delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+body form.card__delete button[type="submit"], body form.card__delete #delete_button {
+  padding: 0.8vw 3.2vw;
+  background-color: gray;
+  color: #fff;
+  border-radius: 0.4vw;
+  width: 100%;
+  font-size: 1.6vw;
+  cursor: pointer;
+}
+
+body form.card__delete button[type="submit"]:hover, body form.card__delete #delete_button:hover {
+  background-color: red;
+}
+
+body form.card__delete #delete_button:hover {
+  background-color: red;
+}
+
 body a.button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
   text-decoration: none;
   display: block;
-  padding: 0.8vw 3.2vw;
-  background-color: #8174ad;
-  color: #fff;
-  border-radius: 0.4vw;
-  margin-top: 3.2vw;
-  width: 100%;
-  font-size: 1.6vw;
-}
-
-form input {
-  width: 100%;
-  outline: none;
-  border: none;
-  font-weight: bold;
-  font-size: 1.6vw;
-  color: black;
-}
-
-form input ::-webkit-input-placeholder {
-  font-size: 1.6vw;
-}
-
-form input :-ms-input-placeholder {
-  font-size: 1.6vw;
-}
-
-form input ::-ms-input-placeholder {
-  font-size: 1.6vw;
-}
-
-form input ::placeholder {
-  font-size: 1.6vw;
-}
-
-form input[type="radio"] {
-  width: initial;
-  margin-right: 0.4vw;
-}
-
-form button[type="submit"] {
   padding: 0.8vw 3.2vw;
   background-color: #8174ad;
   color: #fff;

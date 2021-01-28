@@ -12,6 +12,7 @@ routes.get('/instructors',function(req,res){
 })
 routes.put('/instructors/', instructors.put)
 routes.post('/instructors',instructors.post)
+routes.delete('/instructors',instructors.delete)
 
 routes.get('/instructors/create',function(req,res){
   return res.render('instructors/create')
