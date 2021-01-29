@@ -3,12 +3,14 @@
 {% block content %}
 
   <div class="card">
-    <table>
+    <table width="100%">
       <thead>
         <tr>
           <th>Instructor</th>
           <th>Atendimento</th>
+          <th>Ação</th>
         </tr>
+
       </thead>
 
       <tbody>
@@ -17,6 +19,11 @@
           <tr>
             <td>{{instructor.name}}</td>
             <td>{{instructor.services}}</td>
+            <td>
+              <a href="instructors/{{instructor.id}}">
+                Ver
+              </a>
+            </td>
           </tr>
           {%endfor%}
         </tbody>
