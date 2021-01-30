@@ -1,12 +1,12 @@
 {
   "instructors": [
     {
-      "id": 4,
-      "name": "Rafinha ",
-      "avatar_url": "http://gooogle.com",
-      "birth": null,
-      "gender": "M",
-      "services": "git alterado",
+      "id": "4",
+      "name": "Ramires ID 4",
+      "avatar_url": "http://google",
+      "birth": 946692000000,
+      "gender": "F",
+      "services": "mudanca",
       "created_at": 1611598948824
     },
     {
