@@ -222,12 +222,37 @@ body .table-container table {
   border-spacing: 0;
 }
 
-body .table-container thead {
+body .table-container thead tr th {
   text-align: left;
 }
 
-body .table-container td, body .table-container th {
+body td, body th {
   padding: .8vw;
   border-bottom: solid 1px #d9d9d9;
+}
+
+body tbody tr:last-child td {
+  border-bottom: none;
+}
+
+body tbody tr td:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 64px 1fr;
+      grid-template-columns: 64px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body tbody tr td:first-child span {
+  width: 48px;
+  height: 48px;
+  background-position: center !important;
+  background-size: cover !important;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 1px 6px -4px black !important;
+          box-shadow: 3px 1px 6px -4px black !important;
+  border: solid 2px grey;
 }
 /*# sourceMappingURL=style.css.map */
