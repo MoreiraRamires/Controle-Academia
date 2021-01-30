@@ -2,12 +2,13 @@
 
 {% block content %}
 
-  <div class="card">
-    <table>
+  <div class="card table-container">
+    <table width="100%">
       <thead>
         <tr>
           <th>Instructor</th>
           <th>Atendimento</th>
+          <th>Visualizar</th>
         </tr>
       </thead>
 
@@ -17,6 +18,10 @@
           <tr>
             <td>{{instructor.name}}</td>
             <td>{{instructor.services}}</td>
+            <td>
+              <a href="/instructors/{{instructor.id}}">
+                Visualize o Instrutor</a>
+            </td>
           </tr>
           {%endfor%}
         </tbody>

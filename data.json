@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": "4",
-      "name": "Ramires ID 4",
-      "avatar_url": "http://google",
-      "birth": 946692000000,
-      "gender": "F",
-      "services": "mudanca",
-      "created_at": 1611598948824
-    },
-    {
       "id": 5,
       "name": "Ramires",
       "avatar_url": "http://google",
