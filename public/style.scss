@@ -221,6 +221,18 @@ body {
         }
       }
     }
+
+    a{
+      background-color: $color-primary;
+      padding: 8px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      font-size: .8vw;
+      border-radius: 6px;
+      margin: .4vw;
+      display: inline-block;
+    }
   }
   
   td,th{

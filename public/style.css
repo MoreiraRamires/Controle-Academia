@@ -226,6 +226,18 @@ body .table-container thead tr th {
   text-align: left;
 }
 
+body .table-container a {
+  background-color: #8174ad;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: .8vw;
+  border-radius: 6px;
+  margin: .4vw;
+  display: inline-block;
+}
+
 body td, body th {
   padding: .8vw;
   border-bottom: solid 1px #d9d9d9;
