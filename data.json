@@ -1,21 +1,13 @@
-{
+{ "members":[],
+  
   "instructors": [
     {
-      "id": 1,
-      "name": "Lucas Martins",
-      "avatar_url": "https://images.unsplash.com/photo-1611817757571-75fe5c08ffd9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "birth": 576806400000,
-      "gender": "M",
-      "services": "Natação",
-      "created_at": 1612030658168
-    },
-    {
-      "id": 2,
-      "name": "Rafael Ramires",
-      "avatar_url": "https://images.unsplash.com/photo-1611817757571-75fe5c08ffd9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "birth": 832291200000,
-      "gender": "M",
-      "services": "Programar",
+      "id": 3,
+      "name": "Laura",
+      "avatar_url": "https://images.unsplash.com/photo-1601412436405-1f0c6b50921f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "birth": null,
+      "gender": "F",
+      "services": "Dormir",
       "created_at": 1612031742280
     },
     {
