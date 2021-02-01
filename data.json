@@ -1,5 +1,19 @@
-{ "members":[],
-  
+{
+  "members": [
+    {
+      "avatar_url": "http://google",
+      "name": "rafael aluno",
+      "email": "aluno@aluno",
+      "birth": 832291200000,
+      "gender": "M",
+      "blood": "A1",
+      "weight": [
+        "51",
+        "166"
+      ],
+      "id": 1
+    }
+  ],
   "instructors": [
     {
       "id": 3,
