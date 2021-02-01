@@ -8,7 +8,10 @@ exports.index= function(req,res){
   return res.render('members/index', {members:data.members})
 }
 
-
+// ===*Create*===
+exports.create =function(req,res){
+  return res.render('members/create')
+}
 // ===*Show*=== 
  
 exports.show = function(req,res){
@@ -32,10 +35,7 @@ exports.show = function(req,res){
 
   return res.render("./members/show", {member})
 }
-// ===*Create*===
-exports.create =function(req,res){
-  return res.render('members/create')
-}
+
 // ===*POST*===
 exports.post = function(req,res){
 
