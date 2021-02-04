@@ -1,26 +1,75 @@
 {
   "members": [
     {
-      "id": 2,
-      "avatar_url": "http://ddd",
-      "name": "rafa ramires",
-      "email": "rafa@aluno.com.br",
-      "birth": null,
-      "gender": "F",
+      "id": 1,
+      "avatar_url": "http://ss",
+      "name": "rafa",
+      "email": "rf@A",
+      "birth": -27080352000000,
+      "gender": "M",
       "blood": "A+",
-      "weight": "1112",
-      "height": "2121"
+      "weight": "11",
+      "height": "11"
     },
     {
       "id": 2,
-      "avatar_url": "http://ddd",
-      "name": "rafa ramires",
-      "email": "rafa@aluno.com.br",
-      "birth": 250732800000,
-      "gender": "F",
+      "avatar_url": "http://ss",
+      "name": "rafa",
+      "email": "rf@A",
+      "birth": -27080352000000,
+      "gender": "M",
       "blood": "A+",
-      "weight": "111",
-      "height": "212"
+      "weight": "11",
+      "height": "11"
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://ss",
+      "name": "rafa",
+      "email": "rf@A",
+      "birth": -27080352000000,
+      "gender": "M",
+      "blood": "A+",
+      "weight": "11",
+      "height": "11"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 2,
+      "name": "rafael",
+      "avatar_url": "https://dafda",
+      "birth": -23921913600000,
+      "gender": "M",
+      "services": "111,111",
+      "created_at": 1612474016970
+    },
+    {
+      "id": 1,
+      "name": "rafael",
+      "avatar_url": "https://dafda",
+      "birth": -23921913600000,
+      "gender": "M",
+      "services": "111,111",
+      "created_at": 1612474016970
+    },
+    {
+      "id": 3,
+      "name": "rafael",
+      "avatar_url": "https://dafda",
+      "birth": -23921913600000,
+      "gender": "M",
+      "services": "111,111",
+      "created_at": 1612474016970
+    },
+    {
+      "id": 4,
+      "name": "rafael",
+      "avatar_url": "https://dafda",
+      "birth": -23921913600000,
+      "gender": "M",
+      "services": "111,111",
+      "created_at": 1612474016970
     }
   ]
 }

@@ -17,7 +17,7 @@
     </section>
   </form>
 
-  <form class="card__delete" method="POST" action="/members?_method=DELETE">
+  <form class="card__delete" id="form-delete" method="POST" action="/members?_method=DELETE">
     <input type="hidden" name="id" value="{{member.id}}">
     <button type="submit" id="delete_button">
       <span>
@@ -26,4 +26,5 @@
         Deletar Instrutor</button>
     </form>
 
+    {% include "../scripts/delet.njk" %}
   {% endblock content %}
