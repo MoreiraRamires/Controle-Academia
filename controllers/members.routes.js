@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const {age, date} = require("../utils")
+const {date} = require("../utils")
 const Intl = require('intl')
 
 
@@ -29,7 +29,7 @@ exports.show = function(req,res){
 
   const member = {
     ...foundMember,
-    age : age(foundMember.birth),   
+    birth : date(foundMember.birth).birthDay,   
     // created_at: Intl.DateTimeFormat("pt-Br").format(foundMember.created_at)
   }
 
@@ -92,7 +92,7 @@ exports.edit = function(req,res){
  
   const member ={
     ...foundMember,
-     birth: date(foundMember.birth)
+     birth: date(foundMember.birth).iso
     // birth: "200-02-01"
   }
 
@@ -119,7 +119,7 @@ exports.put = function(req,res){
   const member ={
     ...foundMember,
     ...req.body,
-     birth: Date.parse(req.body.birth),
+     birth: Date.parse(req.body.birth).iso,
      id: Number(req.body.id)
   }
 
